@@ -763,15 +763,17 @@ function Shop() {
         variant="text"
         aria-label="Basic button group"
         sx={{
-          borderRadius: "8px",
-          padding: "4px",
-          marginLeft: "230px",
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'column', md: 'row' },
+          borderRadius: { xs: '2px', sm: '4px', md: '8px', lg: '12px', xl: '16px' },
+          padding: { xs: '1px', sm: '2px', md: '4px', lg: '6px', xl: '8px' },
+          marginLeft: '20%'
         }}
       >
         <Button
           onClick={() => setCategory("hot")}
           style={{
-            width: "200px",
+            width:{ xs: '80%', sm: '75%', md: '260px', lg: '280px', xl: '300px' },
             backgroundColor: category === "hot" ? "#f0efdc" : "#7c2414",
             color: category === "hot" ? "black" : "white",
           }}
@@ -781,7 +783,7 @@ function Shop() {
         <Button
           onClick={() => setCategory("cold")}
           style={{
-            width: "200px",
+            width: { xs: '80%', sm: '75%', md: '260px', lg: '280px', xl: '300px' },
             backgroundColor: category === "cold" ? "#f0efdc" : "#7c2414",
             color: category === "cold" ? "black" : "white",
           }}
@@ -791,7 +793,7 @@ function Shop() {
         <Button
           onClick={() => setCategory("food")}
           style={{
-            width: "200px",
+            width: { xs: '80%', sm: '75%', md: '260px', lg: '280px', xl: '300px' },
             backgroundColor: category === "food" ? "#f0efdc" : "#7c2414",
             color: category === "food" ? "black" : "white",
           }}
